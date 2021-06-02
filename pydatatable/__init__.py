@@ -1,10 +1,20 @@
 """
+
+   _____ _     _     _ _               _     
+  / ____(_)   | |   | | |             | |    
+ | (___  _  __| | __| | |__   ___  ___| |__  
+  \___ \| |/ _` |/ _` | '_ \ / _ \/ __| '_ \ 
+  ____) | | (_| | (_| | | | |  __/\__ \ | | |
+ |_____/|_|\__,_|\__,_|_| |_|\___||___/_| |_|
+                                             
+                                             
+
 Library to create graphical Tables from the given data. This library is made by Siddhesh Chavan! The module's version is 1.0.
 Import Statement:
     import pydatatable
 
 Documentation(Tutorial):
-    For documentation go to -------
+    For documentation go to https://github.com/Sid72020123/pydatatable#readme
 
 Credits:
     All code credits to Siddhesh Chavan
