@@ -16,7 +16,7 @@ table1 = table.Table(location = 'table_test', title='Simple Table') #Create a Ta
 all_data = [[1,1,1],[2,2,2]] #Define the 'all_data' list.
 title = ['Title1','Title2','Title3'] #Define the 'title' list.
 table1.add_data(data=all_data, columns=title) #Add data to the table.
-table1.open() #Automatically open tha table.
+table1.open() #Automatically open the table.
 ``` 
 The above program will save a '.html' file in the given location.
 It will open a '.html' document as shown below:
@@ -38,7 +38,7 @@ The Table class's parameters:
 * ```data_bg_color``` --> The background colour of the data in the table. Use any color or the hexadecimal value in string format.
 * ```column_text_color``` --> The text colour of the text in columns.
 * ```data_text_color``` --> The text colour of the text in the data rows.
-* ```print_log``` --> Set it to ```True``` if you want the table making log to be printed out on the console.4
+* ```print_log``` --> Set it to ```True``` if you want the table making log to be printed out on the console.
 #### Use above parameters like:
 ```python
 import pydatatable as table
@@ -49,17 +49,17 @@ table1 = table.Table(location='test_table', title='Table', table_border=5, borde
 all_data = [[1,1,1],[2,2,2]] #Define the 'all_data' list.
 title = ['Title1','Title2','Title3'] #Define the 'title' list.
 table1.add_data(data=all_data, columns=title) #Add data to the table.
-table1.open() #Automatically open tha table.
+table1.open() #Automatically open the table.
 ```
 
 ### Functions:
 #### 1. add_data(data, columns)
   Function to add the data to the table. 
   * The ```data``` should have a nested list with all the data. For example, ```data=[[1,1,1],[2,2,2]]```
-  * The ```columns``` should have a list of all columns to be showwed in the table. For example, ```columns=['Title1','Title2','Title3']```
+  * The ```columns``` should have a list of all columns to be showed in the table. For example, ```columns=['Title1','Title2','Title3']```
   
   **The length of the nested list, data, should be equal to the data in the columns as shown in the above example.**
 
 #### 2. enable_auto_update(time=5000)
-  Function to enable auto update teh table.
-  * The ```time``` should be in milliseconds and integer format. It is the time after which teh table is updated.
+  Function to enable auto update the table.
+  * The ```time``` should be in milliseconds and integer format. It is the time after which the table is updated.
