@@ -21,7 +21,7 @@ table1.open() #Automatically open the table.
 The above program will save a '.html' file in the given location.
 It will open a '.html' document as shown below:
 
-![Image](/images/1.png)
+![Image](https://github.com/Sid72020123/pydatatable/blob/main/images/1.png)
 ## The Table Class
 The Table class contains many features:
 ### Parameters:
@@ -128,4 +128,21 @@ while True:
     time.sleep(5)
     i += 1
 ```
-**Use ```wait=False``` if you want to update both the tables at the same time but also use ```time.sleep()``` function otherwise the table will not be displayed. Check the above program.**
+**Use ```wait=False``` if you want to update both the tables at the same time but also use ```time.sleep()``` function otherwise the table will not be displayed. Check the above program.** The above output is:
+![Image](https://github.com/Sid72020123/pydatatable/blob/main/images/2.png)
+
+## The MultipleTables Class
+The MultipleTables class contains many features:
+### Parameters:
+* ```location``` --> The location of the '.html' page to be saved.
+* ```title``` --> The title of group of tables.
+* ```height``` --> The height of all frames.
+* ```width``` --> The width of all frames.
+* ```frame_border``` --> The frame border of all frames.
+* ```border``` --> The border width of all frames.
+* ```border_color``` --> The border color of all frames.
+
+### Functions:
+#### 1.add_chart(table_locations, frame_value=[], frame_size=[])
+    > Function to add the saved charts on one page.
+    *  ```table_locations``` --> The list of all the line's saved locations to be added on one page. The elements should be separated by commas and should be in 'string' format.        Please give the correct location along with the extension. The order of charts in the page is same as the order of files given in the list. You can change the values in the    list to add the charts accordingly.
