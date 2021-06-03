@@ -55,7 +55,11 @@ table1.open() #Automatically open tha table.
 ### Functions:
 #### 1. add_data(data, columns)
   Function to add the data to the table. 
-  * The ```data``` shold have a nested list with all the data. For example, ```data=[[1,1,1],[2,2,2]]```
+  * The ```data``` should have a nested list with all the data. For example, ```data=[[1,1,1],[2,2,2]]```
   * The ```columns``` should have a list of all columns to be showwed in the table. For example, ```columns=['Title1','Title2','Title3']```
   
   **The length of the nested list, data, should be equal to the data in the columns as shown in the above example.**
+
+#### 2. enable_auto_update(time=5000)
+  Function to enable auto update teh table.
+  * The ```time``` should be in milliseconds and integer format. It is the time after which teh table is updated.
