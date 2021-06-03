@@ -95,3 +95,6 @@ The above program will create and update the table by random values. **Make sure
 
 #### 5.open()
   > Function to open the saved table automatically.
+
+#### 6.print_settings()
+  > Function to print the table's settings in the console.
