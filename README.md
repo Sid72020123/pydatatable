@@ -144,5 +144,5 @@ The MultipleTables class contains many features:
 
 ### Functions:
 #### 1.add_chart(table_locations, frame_value=[], frame_size=[])
-    > Function to add the saved charts on one page.
-    *  ```table_locations``` --> The list of all the line's saved locations to be added on one page. The elements should be separated by commas and should be in 'string' format.        Please give the correct location along with the extension. The order of charts in the page is same as the order of files given in the list. You can change the values in the    list to add the charts accordingly.
+  > Function to add the saved charts on one page.
+  *  ```table_locations``` --> The list of all the line's saved locations to be added on one page. The elements should be separated by commas and should be in 'string' format.        Please give the correct location along with the extension. The order of charts in the page is same as the order of files given in the list. You can change the values in the    list to add the charts accordingly.
