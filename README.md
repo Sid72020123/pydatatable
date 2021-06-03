@@ -98,3 +98,34 @@ The above program will create and update the table by random values. **Make sure
 
 #### 6.print_settings()
   > Function to print the table's settings in the console.
+
+### Creating Multiple Tables on one page
+To create multiple tables on one page, use the ```MultipleTables``` class. For Example,
+```python
+import pydatatable as table
+import random
+import time
+
+table1 = table.Table('table')
+table1.add_data([[0, 0, 0]], ['1', '2', '3'])
+table1.enable_auto_update()
+
+table2 = table.Table('table2')
+table2.add_data([[0, 0, 0]], ['1', '2', '3'])
+table2.enable_auto_update()
+
+multiple_table = table.MultipleTables('chart', 'All Types', height=600, width=700)
+multiple_table.add_chart(['table.html','table2.html'])
+multiple_table.open()
+
+i = 3
+while True:
+    one = random.randint(0, 99999)
+    two = random.randint(0, 99999)
+    three = random.randint(0, 99999)
+    table1.update_data(data=[[one, two, three]], append=True, wait=False)
+    table2.update_data(data=[[one, two, three]], append=True, wait=False)
+    time.sleep(5)
+    i += 1
+```
+**Use ```wait=False``` if you want to update both the tables at the same time but also use ```time.sleep()``` function otherwise the table will not be displayed. Check the above program.**
