@@ -54,12 +54,44 @@ table1.open() #Automatically open the table.
 
 ### Functions:
 #### 1. add_data(data, columns)
-  Function to add the data to the table. 
+  > Function to add the data to the table. 
   * The ```data``` should have a nested list with all the data. For example, ```data=[[1,1,1],[2,2,2]]```
   * The ```columns``` should have a list of all columns to be showed in the table. For example, ```columns=['Title1','Title2','Title3']```
   
   **The length of the nested list, data, should be equal to the data in the columns as shown in the above example.**
 
 #### 2. enable_auto_update(time=5000)
-  Function to enable auto update the table.
+  > Function to enable auto update the table.
   * The ```time``` should be in milliseconds and integer format. It is the time after which the table is updated.
+
+#### 3.disable_auto_update()
+  > Function to disable auto update.
+
+#### 4.update_data(data, append=False, wait=True)
+  > Function to update the data. **Remember to call this function in a loop**
+  * The ```data``` is the nested list of the data to be updated.
+  * If you want to append the new data to the previous data then set append to ```True``` else ```False```
+  * If you want your program to wait for the given auto update time and run again then the set ```wait``` to ```True```, if not then ```False```
+  **For Example,**
+  ```python
+  import pydatatable as table
+import random
+
+table1 = table.Table('table')
+table1.add_data([[0, 0, 0]], ['1', '2', '3'])
+table1.enable_auto_update()
+table1.open()
+
+i = 3
+while True:
+    one = random.randint(0, 99999)
+    two = random.randint(0, 99999)
+    three = random.randint(0, 99999)
+    table1.update_data(data=[[one, two, three]], append=True, wait=True)
+    i += 1
+```
+
+The above program will create and update the table by random values. **Make sure to call the 'enable_auto_update()' function before the 'open()' function.**
+
+#### 5.open()
+  > Function to open the saved table automatically.
