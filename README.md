@@ -115,7 +115,7 @@ table2.add_data([[0, 0, 0]], ['1', '2', '3'])
 table2.enable_auto_update()
 
 multiple_table = table.MultipleTables('chart', 'All Types', height=600, width=700)
-multiple_table.add_chart(['table.html','table2.html'])
+multiple_table.add_table(['table.html','table2.html'])
 multiple_table.open()
 
 i = 3
