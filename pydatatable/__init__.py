@@ -9,7 +9,7 @@
                                              
                                              
 
-Library to create graphical Tables from the given data. This library is made by Siddhesh Chavan! The module's version is 1.0.
+Library to create graphical Tables from the given data. This library is made by Siddhesh Chavan! The module's version is 1.1.
 Import Statement:
     import pydatatable
 
@@ -254,7 +254,7 @@ class MultipleTables:
         self.frame_size = []
         self.table_locations = ''
 
-    def add_chart(self, table_locations, frame_value=[], frame_size=[]):
+    def add_table(self, table_locations, frame_value=[], frame_size=[]):
         """
         Function to add the saved charts on one page.
         :param table_locations: The list of all the line's saved locations to be added on one page. The elements should be separated by commas and should be in 'string' format. Please give the correct location along with the extension. The order of charts in the page is same as the order of files given in the list. You can change the values in the list to add the charts accordingly.
@@ -302,3 +302,5 @@ class MultipleTables:
         print(f"\tDifferent Size:- ")
         for i in range(0, len(self.frame_value)):
             print(f"\t\t{self.frame_value[i]} -> {self.frame_size[i]}")
+
+print("☆Welcome to pydatatable(v1.1)-> https://github.com/Sid72020123/pydatatable#readme☆")

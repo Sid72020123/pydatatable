@@ -1,4 +1,4 @@
-# pydatatable v1.0
+# pydatatable v1.1
 ## Python Library to create graphical table from the data and is with auto update feature!
 ```pydatatable``` is a Python library made to display graphical tables from the given data.
 ### Introduction
@@ -143,9 +143,9 @@ The MultipleTables class contains many features:
 * ```border_color``` --> The border color of all frames.
 
 ### Functions:
-#### 1. add_chart(table_locations, frame_value=[], frame_size=[])
-  > Function to add the saved charts on one page.
-  *  ```table_locations``` --> The list of all the line's saved locations to be added on one page. The elements should be separated by commas and should be in 'string' format.        Please give the correct location along with the extension. The order of charts in the page is same as the order of files given in the list. You can change the values in the    list to add the charts accordingly.
+#### 1. add_table(table_locations, frame_value=[], frame_size=[])
+  > Function to add the saved tables on one page.
+  *  ```table_locations``` --> The list of all the line's saved locations to be added on one page. The elements should be separated by commas and should be in 'string' format. Please give the correct location along with the extension. The order of charts in the page is same as the order of files given in the list. You can change the values in the list to add the charts accordingly.
   *  ```frame_value``` --> If you want to change the size of one table in a page then give the table's list index according to the 'table_locations' list and use the frame_size      parameter to set a different size for that specified table.
   *  ```frame_size``` --> If you pass the 'frame_size' parameter, then give the size of that table in a 2-d list. First is height and then width.
 
