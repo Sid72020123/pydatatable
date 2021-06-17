@@ -1,4 +1,6 @@
 # pydatatable v1.1
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
 [![Downloads](https://static.pepy.tech/personalized-badge/pydatatable?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/pydatatable)
 ## Python Library to create graphical table from the data and is with auto update feature!
 ```pydatatable``` is a Python library made to display graphical tables from the given data.
