@@ -1,4 +1,5 @@
 # pydatatable v1.1
+[![Downloads](https://static.pepy.tech/personalized-badge/pydatatable?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/pydatatable)
 ## Python Library to create graphical table from the data and is with auto update feature!
 ```pydatatable``` is a Python library made to display graphical tables from the given data.
 ### Introduction
