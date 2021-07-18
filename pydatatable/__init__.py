@@ -2,7 +2,7 @@ __name__ = "pydatatable"
 __version__ = "1.2"
 __developer__ = "Siddhesh Chavan"
 __doc__ = """
-Library to create graphical Tables from the given data. This library is made by Siddhesh Chavan! The module's version is 1.1.
+Library to create graphical Tables from the given data. This library is made by Siddhesh Chavan!
 Import Statement:
     import pydatatable
 
