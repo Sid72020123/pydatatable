@@ -1,14 +1,7 @@
-"""
-
-   _____ _     _     _ _               _     
-  / ____(_)   | |   | | |             | |    
- | (___  _  __| | __| | |__   ___  ___| |__  
-  \___ \| |/ _` |/ _` | '_ \ / _ \/ __| '_ \ 
-  ____) | | (_| | (_| | | | |  __/\__ \ | | |
- |_____/|_|\__,_|\__,_|_| |_|\___||___/_| |_|
-                                             
-                                             
-
+__name__ = "pydatatable"
+__version__ = "1.2"
+__developer__ = "Siddhesh Chavan"
+__doc__ = """
 Library to create graphical Tables from the given data. This library is made by Siddhesh Chavan! The module's version is 1.1.
 Import Statement:
     import pydatatable
@@ -27,6 +20,7 @@ Information:
     Scratch Account:- @Sid72020123 (Link: https://scratch.mit.edu/users/Sid72020123/)
     My self-made Website: https://Sid72020123.github.io
 """
+
 import os
 import time
 
@@ -34,7 +28,8 @@ import time
 class Table:
     def __init__(self, location, title='Table', table_border=5, border_color='Black', cell_padding=3, cell_spacing=0,
                  cell_horizontal_text_align='center', cell_vertical_text_align='middle', column_bg_color='Yellow',
-                 data_bg_color='White', column_text_color='Black', data_text_color='Black', print_log=False):
+                 data_bg_color='White', column_text_color='Black', data_text_color='Black', print_log=False,
+                 font="sans serif"):
         """
         Class to Create a Table from given data.
         :param location: The location of the table to be stored as a '.html' file.
@@ -50,6 +45,7 @@ class Table:
         :param column_text_color: The text color of the column.
         :param data_text_color: The text color of the data.
         :param print_log: Set it to 'True' to see the log of making of the table.
+        :param font: The font of the table.
         """
         self.location = location
         self.title = title
@@ -69,6 +65,7 @@ class Table:
         self.update_time = 5000
         self.wait = True
         self.print_log = print_log
+        self.font = font
 
     def add_data(self, data, columns):
         """
@@ -81,7 +78,8 @@ class Table:
         if self.print_log:
             print(f"'{self.title}': Creating Table.....")
         file = open(f'{self.location}.html', 'w')
-        file.write(f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body>\n<center><h1>{self.title}</h1>\n")
+        file.write(
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -116,7 +114,7 @@ class Table:
             print(f"'{self.title}': Enabling Auto Update.....")
         file = open(f'{self.location}.html', 'w')
         file.write(
-            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};' onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -149,7 +147,8 @@ class Table:
         if self.print_log:
             print(f"'{self.title}': Disabling Auto Update.....")
         file = open(f'{self.location}.html', 'w')
-        file.write(f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body>\n<center><h1>{self.title}</h1>\n")
+        file.write(
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -190,7 +189,7 @@ class Table:
             time.sleep(self.update_time / 1000)
         file = open(f'{self.location}.html', 'w')
         file.write(
-            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
+            f"<html>\n<head>\n<title>\n{self.title}\n</title>\n</head>\n<body style='font-family:{self.font};' onload='AutoRefresh({self.update_time})'>\n<center><h1>{self.title}</h1>\n")
         file.write(
             f"<table border = '{self.table_border}' BorderColor='{self.border_color}' cellpadding='{self.cell_padding}' cellspacing='{self.cell_spacing}'>\n")
         file.write(
@@ -229,6 +228,7 @@ class Table:
         print(f"Table '{self.title}' settings:-")
         print(
             f"\tTable Name:- {self.title}\n\tTable Location:- {self.location}.html\n\tTable Border:- {self.table_border}\n\tBorder Color:- {self.border_color}\n\tCell padding:- {self.cell_padding}\n\tCell Spacing:- {self.cell_spacing}\n\tHorizontal Text Align:- {self.cell_horizontal_text_align}\n\tVertical Text Align:- {self.cell_vertical_text_align}\n\tColumn Background Color:- {self.column_bg_color}\n\tData Background Color:- {self.data_bg_color}\n\tColumn Font Color:- {self.column_text_color}\n\tData Font Color:- {self.data_text_color}\n\tPrint Log:- {self.print_log}")
+
 
 class MultipleTables:
     def __init__(self, location, title="Multiple Line", height=600, width=1000, frame_border=0, border=0,
@@ -295,12 +295,17 @@ class MultipleTables:
         """
         Function to print the table settings.
         """
-        print(f"Multiple Tables - '{self.title}' settings:-\n\tTable Name:- {self.title}\n\tTable Type:- Multiple Table\n\tTable Location:- {self.location}.html\n\tTable Height:- {self.height}\n\tTable Width:- {self.width}\n\tTable Border:- {self.border}\n\tFrame Border:- {self.frame_border}\n\tBorder Color:- {self.border_color}")
+        print(
+            f"Multiple Tables - '{self.title}' settings:-\n\tTable Name:- {self.title}\n\tTable Type:- Multiple Table\n\tTable Location:- {self.location}.html\n\tTable Height:- {self.height}\n\tTable Width:- {self.width}\n\tTable Border:- {self.border}\n\tFrame Border:- {self.frame_border}\n\tBorder Color:- {self.border_color}")
         print(f"\tSub tables:-")
         for i in range(0, len(self.table_locations)):
             print(f"\t\t{i} -> {self.table_locations[i]}")
         print(f"\tDifferent Size:- ")
-        for i in range(0, len(self.frame_value)):
-            print(f"\t\t{self.frame_value[i]} -> {self.frame_size[i]}")
+        if len(self.frame_value) == 0:
+            print('\t\tNone')
+        else:
+            for i in range(0, len(self.frame_value)):
+                print(f"\t\t{self.frame_value[i]} -> {self.frame_size[i]}")
 
-print("☆Welcome to pydatatable(v1.1)-> https://github.com/Sid72020123/pydatatable#readme☆")
+
+print(f"{__name__} v{__version__} - https://github.com/Sid72020123/pydatatable#readme")
